@@ -4,10 +4,6 @@ import utils
 app = Flask(__name__)
 
 HOTELS_CSV_PATH = "./data/hotels.csv"
-HEADER = {
-    "Content-Type": "application/json",
-    "User-Agent": "User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
-}
 
 
 @app.route('/candidates')
@@ -35,4 +31,4 @@ def start():
 
 if __name__ == '__main__':
     start()
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
